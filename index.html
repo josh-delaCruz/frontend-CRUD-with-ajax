@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestione Dipendenti</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+    <!--Javascript-->
+    <script src="./js/JQuery.js"></script>
+    <script src="./js/manageEmployee.js"></script>
+
+</head>
+<body>
+    <h2 class="title">Lista Dipenenti</h2>
+    <br><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="title">ID</th>
+                <th class="title">DATA NASCITA </th>
+                <th class="title">NOME</th>
+                <th class="title">COGNOME</th>
+                <th class="title">SESSO</th>
+                <th class="title">DATA ASSUNZIONE</th>
+                <th class="title">RIMUOVI</th>
+
+              </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="7">
+                    <!-- Trigger/Open The Modal -->
+                    <button class="mdButton mdSpace" id="myBtn2">Modifica Dipendenti</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal2" class="modal2">
+
+                    <!-- Modal content -->
+                    <div class="modal-content2">
+                        <span class="close2">&times;</span>
+                        <h2 class="h2-mod">Modifica dati Impiegati</h2>
+                        <label for="idEmployee">Inserire id Dipendente da modificare</label><br>
+                        <input type="number" id="idEmployee" min="10001"><br>
+                        <label for="firstNameMod">Nome:</label>
+                        <input type="text" placeholder="*nome" class="textBox" id="firstNameMod"><br>
+                        <label for="lastNameMod">Cognome:</label>
+                        <input type="text" placeholder="*cognome" class="textBox" id="lastNameMod"><br>
+                        <label for="genderMod">Genere:</label>
+                        <select id="genderMod">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <!--<option value="Altro">Altro</option>-->
+                        </select><br>
+                        <label for="hireDateMod">Data Assunzione</label><br>
+                        <input type="date" id="hireDateMod" ><br>
+                        <label for="birthDateMod">Data Nascita</label><br>
+                        <input type="date" id="birhtDateMod" ><br>
+                        <input type="button" value="Modifica" id="btnMod" class="mdButton">
+
+                    </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="6">
+                     <!-- Trigger/Open The Modal -->
+                    <button class="addButton myBtn" id="myBtn">Aggiungi Dipendenti</button>
+
+                    <!-- The Modal -->  
+                    <div id="myModal" class="modal myModal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 class="backgroudAdd">Aggiungi Dipendenti</h2>
+                    </div>
+                    <div class="modal-body">
+                        <label for="firstName">Nome:</label>
+                        <input type="text" placeholder="*nome" class="textBox" id="firstName"><br>
+                        <label for="lastName">Cognome:</label>
+                        <input type="text" placeholder="*cognome" class="textBox" id="lastName"><br>
+                        <label for="gender">Genere:</label>
+                        <select id="gender">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <!--<option value="Altro">Altro</option>-->
+                        </select><br>
+                        <label for="hire">Data Assunzione</label><br>
+                        <input type="date" id="hireDate" ><br>
+                        <label for="hire">Data Nascita</label><br>
+                        <input type="date" id="birhtDate" >
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" value="Aggiungi" class="addButton" id="btnAdd">
+                    </div>
+                    </div>
+                    </div>
+                </th>
+                <th>
+                    <input type="button" value="LICENZIA TUTTI" id="l" class="rmButton spin" onclick="licenzia()">
+                </th>
+            </tr>
+            
+        </tfoot>
+    </table>
+    <br>
+
+<center>
+    <div>
+        <input type='button' value='First Page' onclick="first()" id='first' class='pagButton'>
+        <input type='button' value='Prev' onclick="prev()" id="prev" class='pagButton'>
+        <button class='indice' id='corrente'>1</button>
+        <input type='button' value='Next' onclick="next()" id="next" class='pagButton'>
+        <input type='button' value='Last Page' onclick="last()" id='last' class='pagButton'>
+    </div>
+</center>
+    <script src="./js/modal.js">//javascript for modal button</script>
+    <script src="./js/modal2.js"></script>
+
+</body>
+</html>
+
+<!-- author @josh-delaCruz -->
